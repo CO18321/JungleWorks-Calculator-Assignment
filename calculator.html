@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator by Ganga Singh</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-header text-center">
+                            <h3>Calculator by Ganga Singh</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-5" id = "BasicArithmetic">
+                                <h5>1. Basic Arithmetic</h5>
+                                <div class = "input-group mt-3" id = "inputBA">
+                                    <input style = "width:30%" type="text" id = "opd1" placeholder="Enter First Operand" class="form-control me-3">
+                                    <select style = "width:10%"class="form-select me-3" id="operation" placeholder="Select Operation">
+                                        <option value="+">+</option>
+                                        <option value="-">-</option>
+                                        <option value="*">*</option>
+                                        <option value="/">/</option>
+                                        <option value="%">%</option>
+                                    </select>
+                                    <input style = "width:30%" type="text" id = "opd2" placeholder="Enter Second Operand" class="form-control me-3">
+                                    <button style = "width:20%" type="submit" class="btn btn-primary" onclick="BasicArithmetic()">Solve</button>
+                                </div>
+
+                                <div class = "d-none mt-3" id = "outputBA">
+                                    <h6 class = "d-inline">Answer: </h6>
+                                    <span class = "d-inline" id = "resBA" class = ".font-weight-normal"></span>
+                                    <button type="submit" class="btn btn-secondary btn-sm mx-4" onclick="clearResult('outputBA')">Clear</button>
+                                
+                                </div>
+                            </div>
+                            <!-- <hr> -->
+                            <div class="mb-5" id = "ExpEval">
+                                <h5>2. Expression Evaluation</h5>
+                                <div class = "input-group mt-3" id = "inputEE">
+                                    <input style = "width:50%" type="text" id = "exp" placeholder="Enter the Expression" class="form-control me-3">
+                                    <button style = "width:20%" type="submit" class="btn btn-primary" onclick="evalExpression()">Evaluate</button>
+                                </div>
+
+                                <div class = "d-none mt-3" id = "outputEE">
+                                    <h6 class = "d-inline">Answer: </h6>
+                                    <span class = "d-inline" id = "resEE" class = ".font-weight-normal"></span>
+                                    <button type="submit" class="btn btn-secondary btn-sm mx-4" onclick="clearResult('outputEE')">Clear</button>
+                                
+                                </div>
+                            </div>
+
+                            <div class="mb-5" id = "NthPrime">
+                                <h5>3. Nth Prime Number</h5>
+                                <div class = "input-group mt-3" id = "inputNN">
+                                    <input style = "width:50%" type="text" id = "n" placeholder="Enter the Value of n (<10**6)" class="form-control me-3">
+                                    <button style = "width:20%" type="submit" class="btn btn-primary" onclick="findNthPrime()">Find</button>
+                                </div>
+
+                                <div class = "d-none mt-3" id = "outputNN">
+                                    <h6 class = "d-inline">Answer: </h6>
+                                    <span class = "d-inline" id = "resNN" class = ".font-weight-normal"></span>
+                                    <button type="submit" class="btn btn-secondary btn-sm mx-4" onclick="clearResult('outputNN')">Clear</button>
+                                
+                                </div>
+                            </div>
+
+                            <div class="mb-5" id = "SquareArea">
+                                <h5>4. Area of a Square</h5>
+                                <div class = "input-group mt-3" id = "inputSA">
+                                    <input style = "width:50%" type="text" id = "side" placeholder="Enter the Side Length" class="form-control me-3">
+                                    <button style = "width:20%" type="submit" class="btn btn-primary" onclick="findSquareArea()">Find Area</button>
+                                </div>
+
+                                <div class = "d-none mt-3" id = "outputSA">
+                                    <h6 class = "d-inline">Answer: </h6>
+                                    <span class = "d-inline" id = "resSA" class = ".font-weight-normal"></span>
+                                    <button type="submit" class="btn btn-secondary btn-sm mx-4" onclick="clearResult('outputSA')">Clear</button>
+                                
+                                </div>
+                            </div>
+
+                            <div class="mb-5" id = "CircleArea">
+                                <h5>5. Area of a Circle</h5>
+                                <div class = "input-group mt-3" id = "inputCA">
+                                    <input style = "width:50%" type="text" id = "radius" placeholder="Enter the Radius" class="form-control me-3">
+                                    <button style = "width:20%" type="submit" class="btn btn-primary" onclick="findCircleArea()">Find Area</button>
+                                </div>
+
+                                <div class = "d-none mt-3" id = "outputCA">
+                                    <h6 class = "d-inline">Answer: </h6>
+                                    <span class = "d-inline" id = "resCA" class = ".font-weight-normal"></span>
+                                    <button type="submit" class="btn btn-secondary btn-sm mx-4" onclick="clearResult('outputCA')">Clear</button>
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>
